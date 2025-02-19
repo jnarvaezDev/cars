@@ -283,7 +283,7 @@ function collision() {
             var _key_ = $('#game-ini').attr('data-option-i').substring(2);
             var _s_ = score
             
-            if(confirm('Felicidades, obtuviste un puntage de '+parseFloat(score + 1))){
+            if(confirm('Felicidades, obtuviste un puntaje de '+parseFloat(score + 1))){
                 location.reload();
             }
             
