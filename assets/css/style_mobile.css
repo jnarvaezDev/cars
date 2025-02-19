@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background: #afafaf;
+  }
+  
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Bebas Neue',"Helvetica Neue",sans-serif !important;
+    font-weight: 100 !important;
+  }
+  
+  .main-title{
+      color:#fff;
+  }
+  
+  .popmake-close{
+      display:none !important;
+  }
+  
+  #init-game, #btn-more{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 30px !important;
+    display: initial !important;
+  }
+  
+  .btn-container{
+      text-align:center;
+  }
+  
+  .pum-theme-173 .pum-container, .pum-theme-floating-bar .pum-container {
+    padding: 40px !important;
+  }
+  
+  #tabla .btn-container .btn-control-1, #tabla .btn-container .btn-control-2{
+      padding: 45px !important;
+      border: none !important;
+  }
+  
+  #tabla .btn-container .btn-control-1{
+    background: url("./../images/izq.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #tabla .btn-container .btn-control-2{
+    background: url("./../images/der.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .container {
+    position: absolute;
+    top: calc(50% - 240px);
+    left: calc(50% - 160px);
+  }
+  
+  #data_cancela .un-sidebar-layout{
+    /*background: url("./../images/fondo.png");
+    background-repeat: no-repeat;*/
+    background-image: url("./../images/fondo-2.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  #canvas {
+    background: url("./../images/Speedway_mobil.png");
+    background-repeat: no-repeat;
+    /*background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAHgCAIAAAEs6ROFAAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+ALAQoxK3KKnHIAAAAdaVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAABdZJREFUeNrt3UGK8zoQhVEpi7D2v7zSJioDh+BAJg5ERtY5w8cDUfn6Nj80TdfMUkppbSsDRfRHuYiHPexhD3vYwx72sIc97GEPe9jDHvawhz3sYQ972MMe9rCHPezhX9TxP1uM6Bp72MMe9rCHPexhD3vYwx72sIc97GEPe9jDHvawhz3sYQ972MOzPfz62eJu8G8vjrT/QPPKT3q5Ly0HO9jBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnbwpJb43cP3Lx76knawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3sYAc72MEOdrCDHexgBzvYwQ52sIMd7GAHO9jBDnawgx3sYAc72MEOdrCDHexgBzv4jI+/e3h017+BeGPHP++47le0b1kIjMAIjMAIjMACIzACIzACIzACI7DACIzACIzACIzAAiMwAiMwAiMwAgvsIxAYgREYgREYgRFYYARGYARGYARGYIERGIERGIERGIERWGAERmAERmAERmCBERiBERiBERiBBUZgBEZgBEZgBEZggREYgREYgREYgQVGYARGYARGYAQWGIERGIERGIERGIEFRmAERmAERmAEFhiBERiBERiBERiBBUZgBEZgBEZgBF5LzfzyX1vbfDRziegW7Fs0AiMwAiMwAiOwwD4CgREYgREYgREYgQVGYARGYARGYAQWGIERGIERGIERGIEFRmAERmAERmAEFhiBERiBERiBEVhgBEZgBEZgBEZgBBYYgREYgREYgRFYYARGYARGYARGYIERGIERGIERGIERWGAERmAERmAERmCBERiBERiBERiBEVhgBEZgBEZgBEZggREYgREYgREYgQVGYARGYARGYARGYIERGIERGIERGIEFRmAERmAERmAEFhiBERiBERiBERiBBUZgBEZgBEZgBBYYgREYgREYgREYgQVGYARGYARGYAQWGIERGIERGIERWGAERmAERmAERmAEFhiBERiBERiBEVhgBEZgBEZgBEZggREYgREYgREYgRFYYARGYARGYARGYIERGIERGIERGIERWGAERmAERmAERmCBERiBERiBERiBBUZgBEZgBEZgBEZggREYgREYgREYgQVGYOZRM0/8361tPjL4q4juOzT4JxZgwIABAwYMBgwYMGDAYMCAAQMGDBgwGDBgwIABAwYMBgwYMGDAYMCAAQMGDBgwGDBgwIABAwYMBgwYMGDAYMCAAQMGDBgwGDBgwIABgwEDBgwYMGDAYMCAAQMGDBgwGDBgwIABgwEDBgwYMGDAYMCAAQMGDBgwGDBgwIABgwEDBgwYMGDAYMCAAQMGDBgwGDBgwIABgwEDBgwYMGDAYMCAAQMGDAYMGDBgwIABgwEDBgwYMGDAYMCAAQMGDAYMGDBgwIABgwEDBgwYMGDAYMCAAQMGDAYMGDBgwIABgwEDBgwYMBgwYMCAAQMGDAYMGDBgwIABgwEDBgwYMBgwYMCAAQMGDAYMGDBgwIABgwEDBgwYMBgwYMCAAQMGDAYMGDBgwIABgwEDBgwYMBgwYMCAAQMGDAYMGDBgwGDAgAEDBgwYMBgwYMCAAQMGDAYMGDBgwGDAgAEDBgwYMBgwYMCAAQMGDAYMGDBgwGDAgAEDBgwYMBgwYMCAAQMGDAYMGDBgwGDAgAEDBgwYMBgwYMCAAYMBAwYMGDBgwGDAgAEDBgwYMBgwYMCAAYMBAwYMGDBgwGDAgAEDBgwYMBgwYMCAAYMBAwYMGDBgwGDAgAEDBgwG7CMAAwYMGDBgMGDAgAEDBgwYDBgwYMCAwYABAwYMGDBgMGDAgAEDBgwYDBgwYMCAwYABAwaGeALhgyn0oJdhpwAAAABJRU5ErkJggg==");*/
+    margin: 0 auto;
+    outline: none;
+    margin-bottom: -4px;
+  }
+  
+  #score {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: block;
+   /* position: absolute;*/
+   /* top: 10px;
+    left: 10px;*/
+    /*text-shadow: -2px 0 black, -2px 2px black, -2px -2px black, 0 2px black, 2px 0 black, 2px 2px black, 2px -2px black, 0 -2px black;*/
+    /*padding: 20px;*/
+    border-radius: 20px;
+    
+    /*float: left;*/
+  }
+  
+  .main-game {
+      /*display: inline;*/
+      width: 100%;
+      padding-top: 23px;
+  }
+  
+  .div-race{
+    text-align: center;
+    background: #a6d300;
+    width: 318px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  
+  #game-ini{
+      text-align:center;
+  }
+  
+  .div-score{
+    background: url(./../images/BACKGROUND.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 520px;
+    float: left;
+    border-radius: 20px;
+    /*background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(177,197,255,1) 52%, rgba(72,72,218,0.9920343137254902) 100%);*/
+  }
+  
+  .det{
+    max-width: 70px;
+    height: 480px;
+    float: left;
+    width: 70px;
+    padding-left: 5px;
+  }
+  
+  .main-info{
+      background: url(./../images/360_F_223268629_6B1FsyVTndYYSiYUJEnXrUcrlruYBtv8.jpg);
+      background-repeat: no-repeat;
+      margin-top: 15px;
+      padding: 10px;
+    border-radius: 15px;
+  }
+  
+  .content-info{
+    margin: 50px auto;
+    text-align: center;
+    max-width: 400px;
+   }
+   
+   .det-score, .det-user, .det-inicio{
+        padding: 0px 30px 0px 30px;
+        display: inline-block;
+        color: white;
+   }
+   
+   .det-user{
+        margin-left: -80px !important;   
+   }
+   
+   .det-mobile{
+       text-align:center;
+   }
+   
+   .det-user img{
+       width: 40px;
+   }
+   
+   .det-inicio{
+       float:right;
+   }
+   
+   .det-inicio img{
+       width: 30px;
+   }
+   
+   .det span {
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+   }
+   
+   .det-score {
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        float:left;
+   }
+   
+   #popmake-176{
+       background: #0a1a3c;
+        border-radius: 10px;
+        font-family: 'Bebas Neue',"Helvetica Neue",sans-serif !important;
+   }
+   
+   article.page-body .post-wrapper{
+       background: #0a1a3d;
+   }
+   
+   .not-game{
+       color: #fff;
+        text-align: center;
+        font-weight: 400;
+   }
+   
+   .not-game a {
+       color: #ee4a09;
+   }
